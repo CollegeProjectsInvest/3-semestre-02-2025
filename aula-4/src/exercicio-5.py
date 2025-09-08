@@ -10,7 +10,7 @@ def calcula_media_alunos(notas: dict[str, list[int]]) -> dict[str, int]:
         soma_notas: int = 0
         for nota in notas[aluno]:
             soma_notas += nota
-        media: int = soma_notas // 4
+        media: int = soma_notas // len(notas[aluno])
         result[aluno] = media
     return result
 
